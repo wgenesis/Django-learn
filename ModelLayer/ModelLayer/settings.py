@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'model_learn.apps.ModelLearnConfig',
+    'blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE = [

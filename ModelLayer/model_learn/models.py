@@ -5,30 +5,7 @@ class Person(models.Model):
     '''
     每个属性表示表的某一列
     '''
-    first_name=models.CharField(max_length=30)
-    last_name=models.CharField(max_length=30)
-    birth_date=models.DateField()
-    
-    def bady_boomer_status(self):
-        '''
-        判断是否是婴儿潮时期出生
-        '''
-        if self.birth_date<datetime.date(1945,8,1):
-            return "早于婴儿潮时期"
-        elif self.birth_date<datetime.date(1965,1,1):
-            return "出生于婴儿潮时期"
-        else:
-            return "晚于婴儿潮时期"
-        
-    @property
-    def full_name(self):
-        '''
-        返回全名
-        '''
-        return '{} {}'.format(first_name,last_name)
-    
-    def __str__(self):
-        return "{} {}".format(self.first_name,self.last_name)
+    name=models.CharField(max_length=30)
     
 class Musician(models.Model):
     first_name=models.CharField(max_length=50)
